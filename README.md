@@ -9,25 +9,25 @@ Today we had our first SCRUM meeting to organize our project and team. Our team 
 
 # Project Requirements
 # The constraints (the end goal ) 
-•	Must negotiate the roles schedule (who is Scrummaster/ Product Owner/ team member, it must rotate each week) 
-•	Must have weekly planning/demo (and scrum meeting each class) 
-•	The “Product” must have a server and a client (can re-used client) 
-•	Must use a Web service technology (either REST or SOAP)
-•	Live demo’s in class, everyone presents.  No PowerPoint, live software
+* Must negotiate the roles schedule (who is Scrummaster/ Product Owner/ team member, it must rotate each week) 
+* Must have weekly planning/demo (and scrum meeting each class) 
+* The “Product” must have a server and a client (can re-used client) 
+* Must use a Web service technology (either REST or SOAP)
+* Live demo’s in class, everyone presents.  No PowerPoint, live software
 
 # Technologies
-•	Using Java as a programming language for server (we will be having classes on it) 
-•	Using Tomcat as web container
-•	Using Eclipse or Netbeans as an IDE
-•	Project stored in BitBucket, progress periodically (daily?)
+* Using Java as a programming language for server (we will be having classes on it) 
+* Using Tomcat as web container
+* Using Eclipse or Netbeans as an IDE
+* Project stored in BitBucket, progress periodically (daily?)
 
 # Initial Tasks for Team:
-•	Create a web application project (use Hotel Reservations as a template, and recycle code)
-•	Add web service to the project (REST- use Java for server)
-•	Add operations to the web service
-•	Implement the web methods
-•	Deploy and test the web service
-•	Invoke web service with the C# code
+* Create a web application project (use Hotel Reservations as a template, and recycle code)
+* Add web service to the project (REST- use Java for server)
+* Add operations to the web service
+* Implement the web methods
+* Deploy and test the web service
+* Invoke web service with the C# code
 
 We have 3 weeks. During week 1, Carlo is Scrummaster, Fatima is Product Owner, and the rest of the team are developers. We will rotate these roles during week 2, and again during week 3.
 
