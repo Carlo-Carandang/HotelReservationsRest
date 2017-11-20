@@ -4,7 +4,11 @@
 
 # Team Members: Fatima Parveen, Meenal Shah, Preeti Padelkar, Sahil Behl, Carlo Carandang
 
+____________________________
 # Minutes: November 15, 2017
+
+Team Members in attendance: Fatima Parveen, Meenal Shah, Preeti Padelkar, Sahil Behl, Carlo Carandang (Scrummaster)
+
 Today we had our first SCRUM meeting to organize our project and team. Our team will use the Hotel Reservations project from Sahil’s and Carlo’s work, as the template for this REST Project. As a reminder, here are the project requirements, constraints and technologies:
 
 # Project Requirements
@@ -32,3 +36,29 @@ Today we had our first SCRUM meeting to organize our project and team. Our team 
 We have 3 weeks. During week 1, Carlo is Scrummaster, Fatima is Product Owner, and the rest of the team are developers. We will rotate these roles during week 2, and again during week 3.
 
 Carlo will add repository for the project. Next scrum meeting is the next class scheduled on November 20, 2017. New Scrummaster and other roles to be switched during class on November 22nd, and again on November 29th.
+
+Next SCRUM meeting on November 20, 2017.
+
+____________________________
+# Minutes: November 20, 2017
+Today we had our 2nd SCRUM meeting to organize our project and team.
+
+Team Members in attendance: Fatima Parveen, Meenal Shah, Preeti Padelkar, Sahil Behl, Carlo Carandang (Scrummaster)
+
+# Old Business:
+* Our team will use the Hotel Reservations project from Sahil’s and Carlo’s work, as the template for this REST Project
+* We will use REST as our Wen service technology
+* We will use Tomcat as the web container
+* Using Eclipse as the IDE
+* Project will be stored in BitBucket
+
+# New Business:
+For Wednesday, we will work on the following tasks as a team:
+* Create a web application project (use Hotel Reservations as a template, and recycle code)
+* Add web service to the project (REST- use Java for server)
+* Add operations to the web service
+* Implement the web methods
+* Deploy and test the web service
+* Invoke web service with the C# code
+
+Next SCRUM meeting on November 22, 2017.
