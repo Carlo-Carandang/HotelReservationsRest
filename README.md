@@ -50,7 +50,7 @@ Team Members in attendance: Fatima Parveen, Meenal Shah, Preeti Padelkar, Sahil 
 * We will use REST as our Wen service technology
 * We will use Tomcat as the web container
 * Using Eclipse as the IDE
-* Project will be stored in BitBucket
+* Project will be stored in BitBucket, on Carlo's repo which now has an academic license for more users beyond limit of 5
 
 # New Business:
 For Wednesday, we will work on the following tasks as a team:
