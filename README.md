@@ -54,6 +54,7 @@ Team Members in attendance: Fatima Parveen, Meenal Shah, Preeti Padelkar, Sahil 
 
 # New Business:
 For Wednesday, we will work on the following tasks as a team:
+
 * Create a web application project (use Hotel Reservations as a template, and recycle code)
 * Add web service to the project (REST- use Java for server)
 * Add operations to the web service
