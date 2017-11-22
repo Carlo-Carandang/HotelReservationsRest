@@ -63,3 +63,29 @@ For Wednesday, we will work on the following tasks as a team:
 * Invoke web service with the C# code
 
 Next SCRUM meeting on November 22, 2017.
+
+____________________________
+# Minutes: November 22, 2017
+Today we had our 3rd SCRUM meeting to organize our project and team.
+
+Team Members in attendance: Fatima Parveen, Meenal Shah, Preeti Padelkar, Sahil Behl, Carlo Carandang (Scrummaster)
+
+# Old Business:
+* Carlo's repo has approved for an academic license to give more users on the account
+* Repo shared with Dan,in addition to all team members
+
+# New Business:
+* Preeti is the new Scrummaster for this week
+* Created MySql Tables on local host and connected to Java controller in class
+* Still need to connect to remote server, which Dan gave us access to (we have usernames and passwords
+
+# Unifinished Business:
+* Create a web application project (use Hotel Reservations as a template, and recycle code)
+* Add web service to the project (REST- use Java for server)
+* Add operations to the web service
+* Implement the web methods
+* Deploy and test the web service
+* Invoke web service with the C# code
+
+Next SCRUM meeting on November 27, 2017.
+
