@@ -94,6 +94,7 @@ ____________________________
 Today we had our 4th SCRUM meeting to organize our project and team.
 
 Team Members in attendance: Sahil Behl, Carlo Carandang (Scrummaster-acting)
+
 Regrets: Fatima Parveen, Meenal Shah, Preeti Padelkar
 
 # Old Business:
