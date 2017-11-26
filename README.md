@@ -108,7 +108,9 @@ Regrets: Fatima Parveen, Meenal Shah, Preeti Padelkar
 * All team members were given read access for the above repo, to clone it, as we need this as an example on how to connect our Hotel Reservations controller to the remote server.
 
 # Unifinished Business:
+
 The following tasks were assigned to the following team members (subject to change):
+
 * Create a web application project (use Hotel Reservations as a template, and recycle code) [Sahil and Carlo]
 * Create tables from the Hotel Reservations project in remote server [Carlo]
 * Add web service to the project (REST- use Java for server) [Fatima]
