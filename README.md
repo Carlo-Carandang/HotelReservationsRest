@@ -89,3 +89,33 @@ Team Members in attendance: Fatima Parveen, Meenal Shah, Preeti Padelkar, Sahil 
 
 Next SCRUM meeting on November 27, 2017.
 
+____________________________
+# Minutes: November 25, 2017
+Today we had our 4th SCRUM meeting to organize our project and team.
+
+Team Members in attendance: Sahil Behl, Carlo Carandang (Scrummaster-acting)
+Regrets: Fatima Parveen, Meenal Shah, Preeti Padelkar
+
+# Old Business:
+* Created MySql Tables on local host and connected to Java controller in class
+* Still need to connect to remote server, which Dan gave us access to (we have usernames and passwords)
+* Email was sent to team members on the username and password for the remote server
+
+# New Business:
+* Sahil and Carlo attended Abisola's tutorial, and was able to connect Java controller to remote server
+* The key change in the RESTSample to connect to remote server is in the JDBCCustomerDAO, and added the following connection string: jdbc:mysql://cs.smu.ca:3306/mcda551003?user=mcda551003&password=mcda551003password
+* Please see the following repo for the connection of the Java controller to the remote server (RESTSample): https://bitbucket.org/carandangc/a00424450_mcda5510/src/cf406afe104da75b87ea989de8e90beabaa399e4/RESTSample/src/RESTSample/?at=master
+* All team members were given read access for the above repo, to clone it, as we need this as an example on how to connect our Hotel Reservations controller to the remote server.
+
+# Unifinished Business:
+The following tasks were assigned to the following team members (subject to change):
+* Create a web application project (use Hotel Reservations as a template, and recycle code) [Sahil and Carlo]
+* Create tables from the Hotel Reservations project in remote server [Carlo]
+* Add web service to the project (REST- use Java for server) [Fatima]
+* Add operations to the web service [Fatima]
+* Implement the web methods [Meenal and Preeti]
+* Deploy and test the web service [Sahil]
+* Invoke web service with the C# code [Meenal and Preeti]
+
+Next SCRUM meeting on November 27, 2017.
+
