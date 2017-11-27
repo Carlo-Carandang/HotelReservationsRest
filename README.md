@@ -122,3 +122,21 @@ The following tasks were assigned to the following team members (subject to chan
 
 Next SCRUM meeting on November 27, 2017.
 
+____________________________
+# Minutes: November 27, 2017
+Today we had our 5th SCRUM meeting to organize our project and team.
+
+Team Members in attendance: Fatima Parveen (Scrummaster, Meenal Shah, Preeti Padelkar, Sahil Behl, Carlo Carandang
+
+Tasks Completed:
+
+* Created Customer class with all required parameters
+* Created Customer Controller with Customer Register method
+* Passed Input Json with cutsomer values for Register method
+* Data is populated in DB from the input json
+* Created tables in remote MySQL database, and populated them
+
+Tasks to be completed:
+
+* Invoke Java webservice for MVC Register controller
+* Implement other functionalities Add reservation,Edit Reservation,Delete Reservation
