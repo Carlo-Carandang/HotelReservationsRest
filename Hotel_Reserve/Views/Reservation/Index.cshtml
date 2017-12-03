@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Hotel_Reserve.Models.Reservation>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Hello @Session["FName"],</h2>
+<br />
+<br />
+<center><h3>Dashboard</h3></center>
+<br />
+<h3>Your Reservations</h3>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckInDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckOutDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfRoom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfGuest)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckInDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckOutDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfRoom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfGuest)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new { @class = "btn btn-warning btn-md" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "btn btn-danger btn-md" })
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+<p>
+    @Html.ActionLink("Add Reservation", "Create", null, new { @class = "btn btn-info btn-md" })
+</p>
