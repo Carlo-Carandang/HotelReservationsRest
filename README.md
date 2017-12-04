@@ -138,5 +138,5 @@ Tasks Completed:
 
 Tasks to be completed:
 
-* Invoke Java webservice for MVC Register controller
+* Invoke Java webservice for MVC Reservation controller
 * Implement other functionalities Add reservation,Edit Reservation,Delete Reservation
