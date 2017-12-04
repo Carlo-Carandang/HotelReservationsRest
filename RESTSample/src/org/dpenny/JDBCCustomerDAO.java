@@ -18,8 +18,9 @@ public  class JDBCCustomerDAO implements CustomerDAO{
         try {
             Class.forName("com.mysql.jdbc.Driver");
             if(connection == null)
-                connection = DriverManager.getConnection("jdbc:mysql://cs.smu.ca:3306/mcda551003?user=mcda551003&password=mcda551003password");
- 
+               connection = DriverManager.getConnection("jdbc:mysql://cs.smu.ca:3306/mcda551003?user=mcda551003&password=mcda551003password");
+             //connection = DriverManager.getConnection("jdbc:mysql://localhost/hotel?user=root&password=password");
+
         } catch (ClassNotFoundException e) {
  
             e.printStackTrace();
@@ -49,7 +50,7 @@ public  class JDBCCustomerDAO implements CustomerDAO{
            // preparedStatement.setInt(1, customer.getId());
             preparedStatement.setString(1,  customer.getLastName());
             preparedStatement.setString(2,  customer.getFirstName());
-            preparedStatement.setString(3,  customer.getStreetNumber());
+            preparedStatement.setInt(3,  customer.getStreetNumber());
             preparedStatement.setString(4,  customer.getStreetName());
             preparedStatement.setString(5,  customer.getCity());
             preparedStatement.setString(6,  customer.getProvince());
@@ -83,11 +84,22 @@ public  class JDBCCustomerDAO implements CustomerDAO{
 	                Customer customer = null;
 	                while(resultSet.next()){
 	                	customer = new Customer();
+	                	customer. setId(Integer.parseInt(resultSet.getString("id")));
+	                	customer.setFirstName(resultSet.getString("firstName"));
+	                	customer.setLastName(resultSet.getString("lastName"));
+	                	customer.setStreetNumber(Integer.parseInt(resultSet.getString("streetNumber")));
+	                	customer.setStreetName(resultSet.getString("streetName"));
+	                	customer.setCity(resultSet.getString("city"));
+	                	customer.setProvince(resultSet.getString("province"));
+	                	customer.setCountry(resultSet.getString("country"));
+	                	customer.setPostalCode(resultSet.getString("postalCode"));
+	                	customer.setPhoneNumber(resultSet.getString("phoneNumber"));
 	                	customer.setEmail(resultSet.getString("email"));
-	                	customer.setPassword(resultSet.getString("password"));       
-	                
-	                
-
+	                	customer.setPassword(resultSet.getString("password"));    
+	                	customer.setCreditCardType(resultSet.getString("creditCardType"));
+	                	customer.setCreditCardName(resultSet.getString("creditCardName"));
+	                	customer.setCreditCardNumber(resultSet.getString("creditCardNumber"));
+	                	customer.setExpirationDate(resultSet.getString("expirationDate"));
 	                	customers.add(customer);
 	                }
 	                resultSet.close();
@@ -99,6 +111,8 @@ public  class JDBCCustomerDAO implements CustomerDAO{
 	            System.out.println(customers);
 	            return customers;
 	    }
+	 
+	 
 	     
 
 	

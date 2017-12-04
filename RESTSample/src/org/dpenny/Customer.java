@@ -6,7 +6,7 @@ public class Customer {
 	private int id;
 	private String firstName;
 	private String lastName;
-	private String streetNumber;
+	private int streetNumber;
 	private String streetName;
 	private String city;
 	private String province;
@@ -23,7 +23,7 @@ public class Customer {
 
 	}	
 	
-	public Customer( int id, String firstName,String lastName, String streetNumber,String streetName, String city,String province,String country,String postalCode,String phoneNumber,String email,String password,String creditCardType,String creditCardNumber,String creditCardName,String expirationDate) {
+	public Customer( int id, String firstName,String lastName, int streetNumber,String streetName, String city,String province,String country,String postalCode,String phoneNumber,String email,String password,String creditCardType,String creditCardNumber,String creditCardName,String expirationDate) {
 		this.id=id;
 		this.firstName = firstName;
 		this.lastName=lastName;
@@ -67,11 +67,11 @@ public class Customer {
 		this.lastName = lastName;
 	}
 
-	public String getStreetNumber() {
+	public int getStreetNumber() {
 		return streetNumber;
 	}
 
-	public void setStreetNumber(String streetNumber) {
+	public void setStreetNumber(int streetNumber) {
 		this.streetNumber = streetNumber;
 	}
 

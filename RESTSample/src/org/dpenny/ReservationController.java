@@ -30,8 +30,23 @@ public class ReservationController {
     }
  
 
-    // URI:
-    // /contextPath/servletPath/Customers
+    @PUT
+    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+    @Path("/Update")
+    @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })  
+    public Reservation updateReservation(Reservation reservation) {
+    	ReservationDAO dao = new JDBCReservationDAO();
+        return dao.updateReservation(reservation);
+    }
+
+    @DELETE
+    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+    @Path("/Delete/{id}")
+    @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })  
+    public void deleteReservation(@PathParam("id") int id) {
+    	ReservationDAO dao = new JDBCReservationDAO();
+        dao.deleteReservation(id);
+    }
     @GET
     @Produces({ MediaType.APPLICATION_JSON})
     public List<Reservation> getEmployees_JSON() {
@@ -39,6 +54,8 @@ public class ReservationController {
         List<Reservation> listOfReservations = dao.getAllReservations();
         return listOfReservations;
     }
+    
+    
  
 	
 	

@@ -16,7 +16,8 @@ public class JDBCReservationDAO implements ReservationDAO{
         try {
             Class.forName("com.mysql.jdbc.Driver");
             if(connection == null)
-                connection = DriverManager.getConnection("jdbc:mysql://cs.smu.ca:3306/mcda551003?user=mcda551003&password=mcda551003password");
+            	   connection = DriverManager.getConnection("jdbc:mysql://cs.smu.ca:3306/mcda551003?user=mcda551003&password=mcda551003password");
+                //connection = DriverManager.getConnection("jdbc:mysql://localhost/hotel?user=root&password=password");
  
         } catch (ClassNotFoundException e) {
  
@@ -88,18 +89,47 @@ public class JDBCReservationDAO implements ReservationDAO{
             System.out.println(reservations);
             return reservations;
     }
-     
-	/*@Override
+    
+    
+	@Override
 	public Reservation updateReservation(Reservation reservation) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	try {
+        PreparedStatement preparedStatement = getConnection().prepareStatement("UPDATE Reservation SET CheckInDate=?,CheckOutDate=?,NumberOfGuest=?,NumberOfRoom=? where id=?");       
+        preparedStatement.setString(1,  reservation.getCheckInDate());
+        preparedStatement.setString(2,  reservation.getCheckOutDate());
+        preparedStatement.setInt(3,  reservation.getNumberOfGuest());
+        preparedStatement.setInt(4,  reservation.getNumberOfRoom());
+        preparedStatement.setInt(5,  reservation.getId());
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
+    }
+	catch (SQLException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+    System.out.println("Update ok"); 
+    return reservation;
+   
+}
 	@Override
 	public void deleteReservation(int id) {
-		// TODO Auto-generated method stub
-		
-	}*/
+	try {
+        PreparedStatement preparedStatement = getConnection().prepareStatement("DELETE FROM Reservation WHERE id =?");       
+       /* preparedStatement.setString(1,  reservation.getCheckInDate());
+        preparedStatement.setString(2,  reservation.getCheckOutDate());
+        preparedStatement.setInt(3,  reservation.getNumberOfGuest());
+        preparedStatement.setInt(4,  reservation.getNumberOfRoom());*/
+        preparedStatement.setInt(1,  id);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
+    }
+	catch (SQLException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+    System.out.println("Record deleted"); 
+   
+}
 
 
   
