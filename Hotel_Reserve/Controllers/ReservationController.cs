@@ -72,7 +72,6 @@ namespace Hotel_Reserve.Controllers
             reservation.Cid = a;
             if (ModelState.IsValid)
             {
-
                 addreservation.reservation(reservation);
               //  Db.Reservations.Add(reservation);
               //  Db.SaveChanges();
@@ -84,6 +83,7 @@ namespace Hotel_Reserve.Controllers
         //---------------------------------GET: Edit a reservation--------------------------------------------------
         public ActionResult Edit(int? id )
         {
+            GetReservation service = new GetReservation();
             List<SelectListItem> ObjItem2 = new List<SelectListItem>()
             {
                 new SelectListItem {Text="1",Value="1" },
@@ -94,12 +94,13 @@ namespace Hotel_Reserve.Controllers
 
             };
             ViewBag.Numbers = ObjItem2;
+            var model = service.getAllReservations();
 
             if (id == null || Session["Email"] == null)
             {
                 return RedirectToAction("LoginCustomer", "Customer");
             }
-            Reservation reservation = Db.Reservations.Find(id);
+            Reservation reservation = model.Where(reserve => reserve.Id == id).First();
             if (reservation == null)
             {
                 return HttpNotFound();
@@ -113,7 +114,9 @@ namespace Hotel_Reserve.Controllers
         {
             
             int a = Int32.Parse(Session["CustomerId"].ToString());
+            EditReservationService editreservation = new EditReservationService();
             Reservation reservation = new Reservation();
+            reservation.Id = reserve.Id;
             reservation.CheckInDate = reserve.CheckInDate;
             reservation.CheckOutDate = reserve.CheckOutDate;
             reservation.NumberOfGuest = reserve.NumberOfGuest;
@@ -122,21 +125,24 @@ namespace Hotel_Reserve.Controllers
 
             if (ModelState.IsValid)
             {
-                Db.Entry(reserve).State = EntityState.Modified;
-                Db.SaveChanges();
+                //Db.Entry(reserve).State = EntityState.Modified;
+                //Db.SaveChanges();
+                editreservation.reservation(reservation);
                 return RedirectToAction("Index","Reservation",new { id = a });
             }
 
             return View(reservation);
         }
         //-----------------------------------GET: delete a reservation-------------------------------------------------------
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null || Session["Email"]==null)
+            GetReservation service = new GetReservation();
+            if ( Session["Email"]==null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Reservation reservation = Db.Reservations.Find(id);
+            var model = service.getAllReservations();
+            Reservation reservation = model.Where(reserve => reserve.Id == id).First();
             if (reservation == null)
             {
                 return HttpNotFound();
@@ -149,10 +155,13 @@ namespace Hotel_Reserve.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            DeleteReservationService deletereservation = new DeleteReservationService();
+
             int a = Int32.Parse(Session["CustomerId"].ToString());
+            var model = deletereservation.reservation(id);
             Reservation reservation = Db.Reservations.Find(id);
-            Db.Reservations.Remove(reservation);
-            Db.SaveChanges();
+            //Db.Reservations.Remove(reservation);
+            //Db.SaveChanges();
             return RedirectToAction("Index", "Reservation", new { id = a });
         }
     }

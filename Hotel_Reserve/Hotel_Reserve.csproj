@@ -198,6 +198,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AddCustomerService.cs" />
     <Compile Include="Services\AddReservationService.cs" />
+    <Compile Include="Services\DeleteReservationService.cs" />
+    <Compile Include="Services\EditReservationService.cs" />
     <Compile Include="Services\GetReservation.cs" />
     <Compile Include="Services\LoginService.cs" />
   </ItemGroup>
